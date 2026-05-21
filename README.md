@@ -23,7 +23,8 @@ npm install
 ```
 Configura tu archivo `.env` basándote en `.env.example`, ejecuta las migraciones de base de datos y arranca el servidor:
 ```bash
-npx prisma migrate dev
+npm run prisma:generate
+npm run prisma:migrate -- --name init
 npm run dev
 ```
 *Por defecto la API correrá en `http://localhost:4000` (o el puerto configurado).*
