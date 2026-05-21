@@ -1,0 +1,89 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.admin-table-container {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow-x: auto;
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-md);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.admin-table th {
+  background: var(--color-bg);
+  padding: var(--space-md) var(--space-lg);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  border-bottom: 1.5px solid var(--color-border);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.admin-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.admin-table tbody tr:hover {
+  background-color: var(--color-primary-50);
+}
+
+[data-theme="dark"] .admin-table tbody tr:hover {
+  background-color: rgba(99, 102, 241, 0.08);
+}
+
+.owner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.owner-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.owner-email {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.admin-badge-container {
+  display: inline-flex;
+}
+
+.admin-actions {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.admin-table-empty {
+  padding: var(--space-2xl) !important;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .admin-table th, .admin-table td {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
